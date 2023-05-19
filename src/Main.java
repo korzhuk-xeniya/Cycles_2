@@ -25,17 +25,44 @@ public class Main {
 
     public static void task2() {
         System.out.println("Задача 2");
+        int j = 0;
+        int i = 10;
+        while (j < 10) {
+            j++;
+            System.out.print(j + " ");
+        }
+        System.out.println(" ");
+        for (; i > 0; ) {
+            System.out.print(i + " ");
+            i = i - 1;
+        }
+        System.out.println(" ");
 
     }
 
     public static void task3() {
         System.out.println("Задача 3");
+        int birth = 17;
+        int mortality = 8;
+        int population = 12_000_000;
+        int year = 0;
+        while (year < 10) {
+            year++;
+            population = population + population * birth / 1000 - population * mortality / 1000;
+            System.out.println("Год " + year + ", численность населения составляет " + population + " человек ");
+        }
+
 
     }
 
     public static void task4() {
         System.out.println("Задача 4");
-
+        int total = 15_000;
+        int percent = 7;
+        for (int month = 1; total < 12_000_000; month++) {
+            total = total + total * percent / 100;
+            System.out.println("Месяц " + month + ", сумма накоплений равна " + total + " рублей");
+        }
     }
 
     public static void task5() {
@@ -53,6 +80,7 @@ public class Main {
         System.out.println("Задача 7");
 
     }
+
     public static void task8() {
         System.out.println("Задача 8");
 
