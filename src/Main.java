@@ -67,23 +67,30 @@ public class Main {
 
     public static void task5() {
         System.out.println("Задача 5");
-
+        int total = 15_000;
+        int percent = 7;
+        for (int month = 1; total < 12_000_000; month++) {
+            total = total + total * percent / 100;
+            if (month % 6 == 0) {
+                System.out.println("Месяц " + month + ", сумма накоплений равна " + total + " рублей");
+            }
+        }
     }
 
-    public static void task6() {
-        System.out.println("Задача 6");
+        public static void task6 () {
+            System.out.println("Задача 6");
 
+
+        }
+
+        public static void task7 () {
+            System.out.println("Задача 7");
+
+        }
+
+        public static void task8 () {
+            System.out.println("Задача 8");
+
+        }
 
     }
-
-    public static void task7() {
-        System.out.println("Задача 7");
-
-    }
-
-    public static void task8() {
-        System.out.println("Задача 8");
-
-    }
-
-}
