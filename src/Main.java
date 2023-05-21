@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         task1();
@@ -77,20 +79,47 @@ public class Main {
         }
     }
 
-        public static void task6 () {
-            System.out.println("Задача 6");
-
-
+    public static void task6() {
+        System.out.println("Задача 6");
+        int total = 15_000;
+        int percent = 7;
+        int year = 0;
+        for (int month = 1; year < 10; month++) {
+            total = total + total * percent / 100;
+            if (month % 6 == 0) {
+                System.out.println("Месяц " + month + ", сумма накоплений равна " + total + " рублей");
+            }
+            if (month % 12 == 0) {
+                year++;
+            }
         }
-
-        public static void task7 () {
-            System.out.println("Задача 7");
-
-        }
-
-        public static void task8 () {
-            System.out.println("Задача 8");
-
-        }
-
     }
+
+    public static void task7() {
+        System.out.println("Задача 7");
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Веедите число первой пятницы в месяце");
+        int dateOfFirstFriday = scanner.nextInt();
+        if (dateOfFirstFriday > 0 && dateOfFirstFriday < 8) {
+            for (int day = dateOfFirstFriday; day < 32; day += 7) {
+                System.out.println("Сегодня пятница, " + day + "-е число. Необходимо подготовить отчет");
+            }
+        } else {
+            System.out.println("Дата первой пятницы в месяце находится в промежутке от 1 до 7. Введите корректное значение");
+        }
+    }
+
+    public static void task8() {
+        System.out.println("Задача 8");
+        int firstYearWhenCometArrives = 0;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Веедите номер текущего года");
+        int thisYear = scanner.nextInt();
+        for (int year = firstYearWhenCometArrives; year < thisYear + 100; year += 79) {
+            if (year > thisYear - 200) {
+                System.out.println(year);
+            }
+        }
+    }
+
+}
